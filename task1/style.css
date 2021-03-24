@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+body { color: #eaeaea; font-family: 'Comfortaa', cursive;
+	background-image: url(three.jpg);
+  	background-repeat: no-repeat;
+ 	background-attachment: fixed;
+  	background-size: cover; }
+
+
+h1 {position: center;}
+#abs {text-align: center;}
+
+hr {
+    border: none; /* Убираем границу для браузера Firefox */
+    color: #eaeaea; /* Цвет линии для остальных браузеров */
+    background-color: #eaeaea; /* Цвет линии для браузера Firefox и Opera */
+    height: 2px; /* Толщина линии */
+}
+
+
+table {
+	border: none;
+	margin: 0px;
+	font-size: 25px;
+    width: 50%; /* Ширина таблицы */
+    color: #eaeaea; /* Цвет текста */
+    border-spacing: 0px; /* Расстояние между ячейками */
+    float: left; width: 600px;
+    margin: 5px;
+    padding: 0px;
+    border-collapse: collapse;
+}
+td {
+	background-color: rgba(197,197,197, 0.1);
+    padding: 5px; /* Поля вокруг текста */
+    padding-left: 20px;
+}
+
+th {
+	background-color: rgba(197,197,197, 0.1);
+    padding: 5px; /* Поля вокруг текста */
+}
+
+.pictures {
+	height: 400px;
+	float: right; width: 600px;
+}
+
+a {
+    color: #fbcbd1;
+    text-decoration: none;
+}
