@@ -5,20 +5,39 @@ function calculate() {
 	var C = document.getElementById('three');
 	var tbody2 = document.getElementById('tbody2');
 
-	var D = Math.pow(B.value, 2) - (4 * A.value * C.value);
-	if (D >= 0) {
-		var X1 = (-(B.value) + Math.sqrt(D))/(2 * A.value);
-		var X2 = (-(B.value) - Math.sqrt(D))/(2 * A.value);
-	} else {
-		X1 = "discriminant";
-		X2 = " less than zero";
+	var X1;
+	var X2;
+
+	if (! (A.value == '' || B.value == '' || C.value == '')) {
+		if (A.value == 0) {
+			X1 = -C.value/B.value;
+			X2 = "nothing";
+			if (isNaN(X1)) {
+				X1 = "can't be calculate";
+				X2 = "can't be calculate";
+			} 
+		}
+		else {
+			var D = Math.pow(B.value, 2) - (4 * A.value * C.value);
+			if (D >= 0) {
+				var X1 = (-(B.value) + Math.sqrt(D))/(2 * A.value);
+				var X2 = (-(B.value) - Math.sqrt(D))/(2 * A.value);
+				if (isNaN(X1)) X1 = "can't be calculate";
+				if (isNaN(X2)) X2 = "can't be calculate";
+			} else {
+				X1 = "discriminant less than zero";
+				X2 = "discriminant less than zero";
+			}
+    	}
+	} else{
+		remove();
 	}
-	
+
 	var tr = document.createElement('tr');
 
 	tr.classList.add("highlight");
 
-	tr.onclick = function() {
+	tr.onclick = function remove() {
         this.parentNode.removeChild(tr);
     }
 
