@@ -3,8 +3,6 @@ function calculate() {
 	var A = document.getElementById('one');
 	var B = document.getElementById('two');
 	var C = document.getElementById('three');
-
-
 	var tbody2 = document.getElementById('tbody2');
 
 	var D = Math.pow(B.value, 2) - (4 * A.value * C.value);
@@ -17,6 +15,8 @@ function calculate() {
 	}
 	
 	var tr = document.createElement('tr');
+
+	tr.classList.add("highlight");
 
 	tr.onclick = function() {
         this.parentNode.removeChild(tr);
