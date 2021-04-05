@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>my page two</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="shortcut icon" href="qwerty.png" type="image/png">
+	<script type="text/javascript" src="logic.js"></script>
+</head>
+<body>
+	<h1 id="abs">Welcome!</h1>
+	<hr>
+	<div class="center">
+		<div class="pole">
+			<input type="number" oninput="handleChange(this);" name="values" id="one" class="input" value="2">
+			<p class="text">&nbsp; &lowast; X &sup2; + &nbsp;</p>
+			<input type="number" oninput="handleChange(this);" name="values" id="two" class="input"  value="-10">
+			<p class="text">&nbsp; &lowast; X + &nbsp;</p>
+			<input type="number" oninput="handleChange(this);" name="values" id="three" class="input" value="-12">
+			<p class="text">&nbsp;=&nbsp;0</p>
+		</div>
+		
+		<input type="button" value="run" onclick="calculate()" class="button">
+	</div>
+	
+	<table id="table">
+		<caption>Таблица результатов</caption>
+		<tr>
+			<th>A</th>
+			<th>B</th>
+			<th>C</th>
+			<th>X1</th>
+			<th>X2</th>
+		</tr>
+		<tbody id="tbody2">
+		</tbody>			
+	</table>
+</body>
+</html>
