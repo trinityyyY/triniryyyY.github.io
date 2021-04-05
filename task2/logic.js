@@ -11,6 +11,7 @@ function calculate() {
 	if (! (A.value == '' || B.value == '' || C.value == '')) {
 		if (A.value == 0) {
 			X1 = -C.value/B.value;
+			X1 = X1.toFixed(2);
 			X2 = "nothing";
 			if (isNaN(X1)) {
 				X1 = "can't be calculate";
@@ -22,6 +23,8 @@ function calculate() {
 			if (D >= 0) {
 				var X1 = (-(B.value) + Math.sqrt(D))/(2 * A.value);
 				var X2 = (-(B.value) - Math.sqrt(D))/(2 * A.value);
+				X1 = X1.toFixed(2);
+				X2 = X2.toFixed(2);
 				if (isNaN(X1)) X1 = "can't be calculate";
 				if (isNaN(X2)) X2 = "can't be calculate";
 			} else {
